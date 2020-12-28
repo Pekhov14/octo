@@ -1,0 +1,40 @@
+[blogPosts]
+pageNumber = "{{ :page }}"
+categoryFilter = "{{ blog }}"
+postsPerPage = 3
+noPostsMessage = "Записей не найдено"
+sortOrder = "published_at desc"
+categoryPage = "home"
+postPage = "home"
+==
+
+{% set comments = blogPosts.posts %}
+
+
+{% for comment in comments %}
+<div class="swiper-slide p-4 swiper-slide-active" style="width: 338.333px;">
+    <div class="card">
+        <div class="card-body">
+            <div class="d-flex align-items-center">
+                <div>
+                    {% for image in comment.featured_images|slice(0, 1) %}
+                        <img alt="{{ comment.title }}" src="{{ image.path }}" class="avatar  rounded-circle">
+                        <small class="d-block text-muted">{{ comment.published_at|date('d:M') }}</small>
+                    {% endfor %}
+                </div>
+                <div class="pl-3">
+                    <h5 class="h6 mb-0">{{ comment.title }}</h5>
+                </div>
+            </div>
+            <p class="mt-4 lh-180">{{ comment.excerpt }}</p>
+            <span class="static-rating static-rating-sm">
+                    <i class="star fas fa-star voted"></i>
+                    <i class="star fas fa-star voted"></i>
+                    <i class="star fas fa-star voted"></i>
+                    <i class="star fas fa-star voted"></i>
+                    <i class="star fas fa-star voted"></i>
+                </span>
+        </div>
+    </div>
+</div>
+{% endfor %}

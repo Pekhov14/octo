@@ -1,0 +1,53 @@
+description = "Default layout"
+==
+<!DOCTYPE html>
+<html lang="en" data-lt-installed="true">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
+    <meta name="author" content="Webpixels">
+    <title>{{ this.page.title }}</title>
+    {% styles %}
+    <!-- Favicon -->
+    <link rel="icon" href="https://preview.webpixels.io/purpose-website-ui-kit/assets/img/brand/favicon.png" type="image/png">
+    <!-- Font Awesome 5 -->
+    <link rel="stylesheet" href="{{ 'assets/css/all.min.css'|theme }}"><!-- Page CSS -->
+    <link rel="stylesheet" href="{{ 'assets/css/swiper.min.css'|theme }}">
+    <!-- Purpose CSS -->
+    <link rel="stylesheet" href="{{ 'assets/css/purpose.css'|theme }}" id="stylesheet">
+    <style></style>
+</head>
+
+<body class="g-sidenav-show g-sidenav-pinned">
+
+{% partial 'header' %}
+
+<div class="main-content">
+    {% page %}
+</div>
+
+{% partial 'footer' %}
+<!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+<script src="{{ 'assets/js/purpose.core.js'|theme }}"></script>
+<!-- Page JS -->
+<script src="{{ 'assets/js/swiper.min.js'|theme }}"></script>
+<!-- Purpose JS -->
+<script src="{{ 'assets/js//purpose.js'|theme }}"></script><div class="mask-body mask-body-light d-xl-none" data-action="sidenav-unpin" data-target="undefined"></div>
+<!-- Demo JS - remove it when starting your project -->
+<script src="{{ 'assets/js/demo.js'|theme }}"></script>
+
+<!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
+<script src="{{ 'assets/js/purpose.core.js'|theme }}"></script>
+<!-- Page JS -->
+<script src="{{ 'assets/js/swiper.min.js'|theme }}"></script>
+<!-- Purpose JS -->
+<script src="{{ 'assets/js/purpose.js'|theme }}"></script><div class="mask-body mask-body-light d-xl-none" data-action="sidenav-unpin" data-target="undefined"></div>
+<!-- Demo JS - remove it when starting your project -->
+<script src="{{ 'assets/js/demo.js'|theme }}"></script>
+
+{% framework extras %}
+{% scripts %}
+
+</body>
+</html>

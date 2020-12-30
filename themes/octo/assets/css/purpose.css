@@ -517,6 +517,10 @@ pre {
   margin-right: -15px;
   margin-left: -15px; }
 
+#comment-form {
+  flex-direction: column;
+}
+
 .no-gutters {
   margin-right: 0;
   margin-left: 0; }
@@ -8630,7 +8634,8 @@ button:focus {
 svg {
   vertical-align: middle;
   overflow: hidden;
-  width: 100%; }
+  /*width: 100%;*/
+}
 
 @media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
   img[src$=".svg"] {

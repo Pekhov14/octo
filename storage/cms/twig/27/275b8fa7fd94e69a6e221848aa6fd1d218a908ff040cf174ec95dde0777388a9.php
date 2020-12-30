@@ -29,13 +29,13 @@ class __TwigTemplate_a66defc7214fa465e44f3da18bec5098a1bfd83bc2882c9aab69d036b75
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array();
-        $filters = array("theme" => 13);
+        $tags = array("if" => 1);
+        $filters = array("theme" => 7);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                [],
+                ['if'],
                 ['theme'],
                 []
             );
@@ -59,90 +59,18 @@ class __TwigTemplate_a66defc7214fa465e44f3da18bec5098a1bfd83bc2882c9aab69d036b75
     {
         $macros = $this->macros;
         // line 1
-        echo "<header class=\"header header-transparent\" id=\"header-main\">
-    <!-- Topbar -->
-    <div id=\"navbar-top-main\" class=\"navbar-top  navbar-dark bg-dark border-bottom\">
-        <div class=\"container px-0\">
-            <div class=\"navbar-nav align-items-center\">
-                <div class=\"d-none d-lg-inline-block\">
-                    <span class=\"navbar-text mr-3\">Purpose - Website UI Kit</span>
-                </div>
-                <div>
-                    <ul class=\"nav\">
-                        <li class=\"nav-item dropdown ml-lg-2\">
-                            <a class=\"nav-link px-0\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" data-offset=\"0,10\">
-                                <img alt=\"Image placeholder\" src=\"";
-        // line 13
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/us.svg");
-        echo "\">
-                                <span class=\"d-none d-lg-inline-block\">United States</span>
-                                <span class=\"d-lg-none\">EN</span>
-                            </a>
-                            <div class=\"dropdown-menu dropdown-menu-sm\">
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"";
-        // line 19
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/es.svg");
-        echo "\">Spanish</a>
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"";
-        // line 21
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/ro.svg");
-        echo "\">Romanian</a>
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"";
-        // line 23
-        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/gr.svg");
-        echo "\">Greek</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class=\"ml-auto\">
-                    <ul class=\"nav\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/pages/utility/support.html\">Support</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"nav-link\" data-action=\"omnisearch-open\" data-target=\"#omnisearch\"><i class=\"fas fa-search\"></i></a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/pages/shop/checkout-cart.html\"><i class=\"fas fa-shopping-cart\"></i></a>
-                        </li>
-                        <li class=\"nav-item dropdown\">
-                            <a class=\"nav-link pr-0\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                <i class=\"fas fa-user-circle\"></i>
-                            </a>
-                            <div class=\"dropdown-menu dropdown-menu-sm dropdown-menu-right\">
-                                <h6 class=\"dropdown-header\">User menu</h6>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-user\"></i>Account
-                                </a>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <span class=\"float-right badge badge-primary\">4</span>
-                                    <i class=\"fas fa-envelope\"></i>Messages
-                                </a>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-cog\"></i>Settings
-                                </a>
-                                <div class=\"dropdown-divider\" role=\"presentation\"></div>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-sign-out-alt\"></i>Sign out
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        echo "<header class=\"header ";
+        if ((twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 1), "id", [], "any", false, false, true, 1) == "home")) {
+            echo " header-transparent ";
+        }
+        echo "\" id=\"header-main\">
     <!-- Main navbar -->
     <nav class=\"navbar navbar-main navbar-expand-lg navbar-transparent navbar-dark bg-dark\" id=\"navbar-main\">
         <div class=\"container px-lg-0\">
             <!-- Logo -->
             <a class=\"navbar-brand mr-lg-5\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/index.html\">
                 <img alt=\"Image placeholder\" src=\"";
-        // line 71
+        // line 7
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/white.png");
         echo "\" id=\"navbar-logo\" style=\"height: 50px;\">
             </a>
@@ -1119,76 +1047,12 @@ class __TwigTemplate_a66defc7214fa465e44f3da18bec5098a1bfd83bc2882c9aab69d036b75
 
     public function getDebugInfo()
     {
-        return array (  146 => 71,  95 => 23,  90 => 21,  85 => 19,  76 => 13,  62 => 1,);
+        return array (  74 => 7,  62 => 1,);
     }
 
     public function getSourceContext()
     {
-        return new Source("<header class=\"header header-transparent\" id=\"header-main\">
-    <!-- Topbar -->
-    <div id=\"navbar-top-main\" class=\"navbar-top  navbar-dark bg-dark border-bottom\">
-        <div class=\"container px-0\">
-            <div class=\"navbar-nav align-items-center\">
-                <div class=\"d-none d-lg-inline-block\">
-                    <span class=\"navbar-text mr-3\">Purpose - Website UI Kit</span>
-                </div>
-                <div>
-                    <ul class=\"nav\">
-                        <li class=\"nav-item dropdown ml-lg-2\">
-                            <a class=\"nav-link px-0\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" role=\"button\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\" data-offset=\"0,10\">
-                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/us.svg'|theme }}\">
-                                <span class=\"d-none d-lg-inline-block\">United States</span>
-                                <span class=\"d-lg-none\">EN</span>
-                            </a>
-                            <div class=\"dropdown-menu dropdown-menu-sm\">
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"{{ 'assets/images/es.svg'|theme }}\">Spanish</a>
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"{{ 'assets/images/ro.svg'|theme }}\">Romanian</a>
-                                <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"dropdown-item\">
-                                    <img alt=\"Image placeholder\" src=\"{{ 'assets/images/gr.svg'|theme }}\">Greek</a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-                <div class=\"ml-auto\">
-                    <ul class=\"nav\">
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/pages/utility/support.html\">Support</a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" class=\"nav-link\" data-action=\"omnisearch-open\" data-target=\"#omnisearch\"><i class=\"fas fa-search\"></i></a>
-                        </li>
-                        <li class=\"nav-item\">
-                            <a class=\"nav-link\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/pages/shop/checkout-cart.html\"><i class=\"fas fa-shopping-cart\"></i></a>
-                        </li>
-                        <li class=\"nav-item dropdown\">
-                            <a class=\"nav-link pr-0\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\" data-toggle=\"dropdown\" aria-haspopup=\"true\" aria-expanded=\"false\">
-                                <i class=\"fas fa-user-circle\"></i>
-                            </a>
-                            <div class=\"dropdown-menu dropdown-menu-sm dropdown-menu-right\">
-                                <h6 class=\"dropdown-header\">User menu</h6>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-user\"></i>Account
-                                </a>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <span class=\"float-right badge badge-primary\">4</span>
-                                    <i class=\"fas fa-envelope\"></i>Messages
-                                </a>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-cog\"></i>Settings
-                                </a>
-                                <div class=\"dropdown-divider\" role=\"presentation\"></div>
-                                <a class=\"dropdown-item\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/#\">
-                                    <i class=\"fas fa-sign-out-alt\"></i>Sign out
-                                </a>
-                            </div>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        return new Source("<header class=\"header {% if this.page.id == 'home' %} header-transparent {% endif %}\" id=\"header-main\">
     <!-- Main navbar -->
     <nav class=\"navbar navbar-main navbar-expand-lg navbar-transparent navbar-dark bg-dark\" id=\"navbar-main\">
         <div class=\"container px-lg-0\">

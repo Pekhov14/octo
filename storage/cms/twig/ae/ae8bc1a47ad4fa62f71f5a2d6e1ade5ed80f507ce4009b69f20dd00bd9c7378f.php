@@ -29,13 +29,13 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("partial" => 801);
-        $filters = array("theme" => 407);
+        $tags = array("component" => 32, "partial" => 923);
+        $filters = array("theme" => 396);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['partial'],
+                ['component', 'partial'],
                 ['theme'],
                 []
             );
@@ -89,21 +89,27 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
         <div class=\"col\">
             <div class=\"row\">
                 <div class=\"col-lg-5 col-xl-6 text-center text-lg-left\">
-                    <div class=\"d-none d-lg-block mb-4\">
-                        <div class=\"alert alert-modern alert-dark\">
-              <span class=\"badge badge-danger badge-pill\">
-                Hot
-              </span>
-                            <span class=\"alert-content\">Dark mode, awesome shortcode library and more.</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class=\"text-white mb-4\">
-                            <span class=\"display-4 font-weight-light\">See it. Love it</span>
-                            <span class=\"d-block\">Purpose <strong class=\"font-weight-light\">Website UI Kit</strong></span>
-                        </h2>
-                        <p class=\"lead text-white\">A unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.</p>
-                        <div class=\"mt-5\">
+                    <div style=\"margin-top: 60px\">
+                        ";
+        // line 32
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "intro/title.htm"        ;
+        $context['__cms_component_params']['fixture'] = "h1"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "text-white mb-4"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 33
+        echo "                        ";
+        $context['__cms_component_params'] = [];
+        $context['__cms_component_params']['file'] = "intro/subtitle.htm"        ;
+        $context['__cms_component_params']['fixture'] = "p"        ;
+        $context['__cms_component_params']['tools'] = "bold,italic"        ;
+        $context['__cms_component_params']['class'] = "lead text-white"        ;
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("contenteditor"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 34
+        echo "                        <div class=\"mt-5\">
                             <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#sct-page-examples\" class=\"btn btn-white rounded-pill hover-translate-y-n3 btn-icon mr-sm-4 scroll-me\">
                                 <span class=\"btn-inner--text\">Page Examples</span>
                                 <span class=\"btn-inner--icon\"><i class=\"fas fa-angle-right\"></i></span>
@@ -466,7 +472,7 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
             </div>
             <div class=\"col-lg-6 order-lg-1\">
                 <img alt=\"Image placeholder\" src=\"";
-        // line 407
+        // line 396
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/presentation-1.png");
         echo "\" class=\"img-fluid img-center\">
             </div>
@@ -523,7 +529,7 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
             </div>
             <div class=\"col-lg-6\">
                 <img alt=\"Image placeholder\" src=\"";
-        // line 461
+        // line 450
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/presentation-2.png");
         echo "\" class=\"img-fluid img-center\">
             </div>
@@ -864,20 +870,162 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
                 <div class=\"swiper-js-container overflow-hidden\">
                     <div class=\"swiper-container swiper-container-initialized swiper-container-horizontal\" data-swiper-items=\"1\" data-swiper-space-between=\"0\" data-swiper-sm-items=\"2\" data-swiper-xl-items=\"3\" style=\"cursor: grab;\">
                         <div class=\"swiper-wrapper\" style=\"transform: translate3d(0px, 0px, 0px);\">
-                            <!-- slider blog -->
-                            ";
-        // line 801
-        $context['__cms_partial_params'] = [];
-        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("blog-slider"        , $context['__cms_partial_params']        , true        );
-        unset($context['__cms_partial_params']);
-        // line 802
-        echo "                        </div>
+                            <div class=\"swiper-slide p-4 swiper-slide-active\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"";
+        // line 794
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/team-1-800x800.jpg");
+        echo "\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Heather Wright</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4 swiper-slide-next\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"";
+        // line 817
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/team-2-800x800.jpg");
+        echo "\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Monroe Parker</h5>
+                                                <small class=\"d-block text-muted\">Apple</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"";
+        // line 840
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/team-3-800x800.jpg");
+        echo "\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">John Sullivan</h5>
+                                                <small class=\"d-block text-muted\">Amazon</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"";
+        // line 863
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/team-4-800x800.jpg");
+        echo "\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">James Lewis</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"";
+        // line 886
+        echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/images/team-5-800x800.jpg");
+        echo "\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Julia Howe</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                         <span class=\"swiper-notification\" aria-live=\"assertive\" aria-atomic=\"true\"></span></div>
                     <!-- Add Pagination -->
                     <div class=\"swiper-pagination w-100 mt-4 d-flex align-items-center justify-content-center swiper-pagination-clickable swiper-pagination-bullets\"><span class=\"swiper-pagination-bullet swiper-pagination-bullet-active\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 1\"></span><span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 2\"></span><span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 3\"></span></div>
                 </div>
             </div>
         </div>
+    </div>
+</section>
+<section class=\"slice slice-lg bg-section-secondary\">
+    <div class=\"container\">
+        <div class=\"mb-5 text-center\">
+            <h3 class=\" mt-4\">Latest from the blog</h3>
+            <div class=\"fluid-paragraph mt-3\">
+                <p class=\"lead lh-180\">Start building fast, beautiful and modern looking websites in no time using our theme.</p>
+            </div>
+        </div>
+        <div class=\"row\">
+            <!-- slider blog -->
+            ";
+        // line 923
+        $context['__cms_partial_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("blog-slider"        , $context['__cms_partial_params']        , true        );
+        unset($context['__cms_partial_params']);
+        // line 924
+        echo "        </div>
     </div>
 </section>
 <!-- Features (v7) -->
@@ -1029,9 +1177,31 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
         </div>
     </div>
 </section>
+
+<section class=\"slice slice-lg\">
+    <div class=\"container\">
+        <div class=\"mb-5 text-center\">
+            <h3 class=\" mt-4\">Subscribe for weekly news</h3>
+            <div class=\"fluid-paragraph mt-3\">
+                <p class=\"lead lh-180\">Customization has never been easier. Purpose has all the right tools in order to make your website building process a breeze.</p>
+            </div>
+        </div>
+        <div class=\"row justify-content-center\">
+            <div class=\"col-lg-5 col-md-7\">
+                ";
+        // line 1087
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("formSubscribe"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 1088
+        echo "            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Call to action (v10) -->
 ";
-        // line 961
+        // line 1094
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("call2action"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
@@ -1049,7 +1219,7 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
 
     public function getDebugInfo()
     {
-        return array (  1035 => 961,  874 => 802,  870 => 801,  527 => 461,  470 => 407,  62 => 1,);
+        return array (  1205 => 1094,  1197 => 1088,  1193 => 1087,  1028 => 924,  1024 => 923,  984 => 886,  958 => 863,  932 => 840,  906 => 817,  880 => 794,  533 => 450,  476 => 396,  112 => 34,  103 => 33,  95 => 32,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -1084,20 +1254,9 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
         <div class=\"col\">
             <div class=\"row\">
                 <div class=\"col-lg-5 col-xl-6 text-center text-lg-left\">
-                    <div class=\"d-none d-lg-block mb-4\">
-                        <div class=\"alert alert-modern alert-dark\">
-              <span class=\"badge badge-danger badge-pill\">
-                Hot
-              </span>
-                            <span class=\"alert-content\">Dark mode, awesome shortcode library and more.</span>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class=\"text-white mb-4\">
-                            <span class=\"display-4 font-weight-light\">See it. Love it</span>
-                            <span class=\"d-block\">Purpose <strong class=\"font-weight-light\">Website UI Kit</strong></span>
-                        </h2>
-                        <p class=\"lead text-white\">A unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.</p>
+                    <div style=\"margin-top: 60px\">
+                        {% component 'contenteditor' file=\"intro/title.htm\" fixture=\"h1\" tools=\"bold,italic\" class=\"text-white mb-4\" %}
+                        {% component 'contenteditor' file=\"intro/subtitle.htm\" fixture=\"p\" tools=\"bold,italic\" class=\"lead text-white\" %}
                         <div class=\"mt-5\">
                             <a href=\"https://preview.webpixels.io/purpose-website-ui-kit/#sct-page-examples\" class=\"btn btn-white rounded-pill hover-translate-y-n3 btn-icon mr-sm-4 scroll-me\">
                                 <span class=\"btn-inner--text\">Page Examples</span>
@@ -1853,14 +2012,141 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
                 <div class=\"swiper-js-container overflow-hidden\">
                     <div class=\"swiper-container swiper-container-initialized swiper-container-horizontal\" data-swiper-items=\"1\" data-swiper-space-between=\"0\" data-swiper-sm-items=\"2\" data-swiper-xl-items=\"3\" style=\"cursor: grab;\">
                         <div class=\"swiper-wrapper\" style=\"transform: translate3d(0px, 0px, 0px);\">
-                            <!-- slider blog -->
-                            {% partial 'blog-slider' %}
+                            <div class=\"swiper-slide p-4 swiper-slide-active\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/team-1-800x800.jpg'|theme }}\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Heather Wright</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4 swiper-slide-next\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/team-2-800x800.jpg'|theme }}\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Monroe Parker</h5>
+                                                <small class=\"d-block text-muted\">Apple</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/team-3-800x800.jpg'|theme }}\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">John Sullivan</h5>
+                                                <small class=\"d-block text-muted\">Amazon</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/team-4-800x800.jpg'|theme }}\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">James Lewis</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class=\"swiper-slide p-4\" style=\"width: 338.333px;\">
+                                <div class=\"card\">
+                                    <div class=\"card-body\">
+                                        <div class=\"d-flex align-items-center\">
+                                            <div>
+                                                <img alt=\"Image placeholder\" src=\"{{ 'assets/images/team-5-800x800.jpg'|theme }}\" class=\"avatar  rounded-circle\">
+                                            </div>
+                                            <div class=\"pl-3\">
+                                                <h5 class=\"h6 mb-0\">Julia Howe</h5>
+                                                <small class=\"d-block text-muted\">Google</small>
+                                            </div>
+                                        </div>
+                                        <p class=\"mt-4 lh-180\">Amazing template! All-in-one, clean code, beautiful design, and really not hard to work with.Highly recommended for any kind on website.</p>
+                                        <span class=\"static-rating static-rating-sm\">
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                          <i class=\"star fas fa-star voted\"></i>
+                        </span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                         <span class=\"swiper-notification\" aria-live=\"assertive\" aria-atomic=\"true\"></span></div>
                     <!-- Add Pagination -->
                     <div class=\"swiper-pagination w-100 mt-4 d-flex align-items-center justify-content-center swiper-pagination-clickable swiper-pagination-bullets\"><span class=\"swiper-pagination-bullet swiper-pagination-bullet-active\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 1\"></span><span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 2\"></span><span class=\"swiper-pagination-bullet\" tabindex=\"0\" role=\"button\" aria-label=\"Go to slide 3\"></span></div>
                 </div>
             </div>
+        </div>
+    </div>
+</section>
+<section class=\"slice slice-lg bg-section-secondary\">
+    <div class=\"container\">
+        <div class=\"mb-5 text-center\">
+            <h3 class=\" mt-4\">Latest from the blog</h3>
+            <div class=\"fluid-paragraph mt-3\">
+                <p class=\"lead lh-180\">Start building fast, beautiful and modern looking websites in no time using our theme.</p>
+            </div>
+        </div>
+        <div class=\"row\">
+            <!-- slider blog -->
+            {% partial 'blog-slider' %}
         </div>
     </div>
 </section>
@@ -2013,6 +2299,23 @@ class __TwigTemplate_ce244048701880731a37d84e18c6a1fa36aec67e45891a1d26c335dfa75
         </div>
     </div>
 </section>
+
+<section class=\"slice slice-lg\">
+    <div class=\"container\">
+        <div class=\"mb-5 text-center\">
+            <h3 class=\" mt-4\">Subscribe for weekly news</h3>
+            <div class=\"fluid-paragraph mt-3\">
+                <p class=\"lead lh-180\">Customization has never been easier. Purpose has all the right tools in order to make your website building process a breeze.</p>
+            </div>
+        </div>
+        <div class=\"row justify-content-center\">
+            <div class=\"col-lg-5 col-md-7\">
+                {% component 'formSubscribe' %}
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Call to action (v10) -->
 {% partial 'call2action' %}", "/home/pekhov/Projects/octo.loc/themes/octo/pages/home.htm", "");
     }

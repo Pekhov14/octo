@@ -1,0 +1,35 @@
+title = "Orange web Blog"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[commentsPost]
+
+[SeoBlogPost]
+post = "post"
+==
+{% component 'SeoBlogPost' data=post %}
+
+<section class="slice">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Article body -->
+                <h1 class="lh-150 mb-3" style="padding-top: 50px;">{{ post.title }}</h1>
+                <article>
+                    {{ post.content_html|raw }}
+                </article>
+                {% component 'commentsPost' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>

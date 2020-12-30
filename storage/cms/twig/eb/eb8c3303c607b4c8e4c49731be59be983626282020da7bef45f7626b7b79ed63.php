@@ -30,13 +30,13 @@ class __TwigTemplate_87db850287c9cd251bd65bab6ce8767e961211f7b65e2d2a009183e3864
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
         $tags = array("set" => 1, "for" => 4);
-        $filters = array("slice" => 10, "escape" => 11, "date" => 12);
+        $filters = array("escape" => 7, "slice" => 8, "date" => 25);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
                 ['set', 'for'],
-                ['slice', 'escape', 'date'],
+                ['escape', 'slice', 'date'],
                 []
             );
         } catch (SecurityError $e) {
@@ -67,56 +67,79 @@ class __TwigTemplate_87db850287c9cd251bd65bab6ce8767e961211f7b65e2d2a009183e3864
         // line 4
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable(($context["comments"] ?? null));
+        $context['_iterated'] = false;
         foreach ($context['_seq'] as $context["_key"] => $context["comment"]) {
             // line 5
-            echo "<div class=\"swiper-slide p-4 swiper-slide-active\" style=\"width: 338.333px;\">
-    <div class=\"card\">
-        <div class=\"card-body\">
-            <div class=\"d-flex align-items-center\">
-                <div>
-                    ";
-            // line 10
+            echo "<div class=\"col-lg-4\">
+    <div class=\"card hover-shadow-lg hover-translate-y-n10\">
+        <a href=\"";
+            // line 7
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "url", [], "any", false, false, true, 7), 7, $this->source), "html", null, true);
+            echo "\">
+            ";
+            // line 8
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "featured_images", [], "any", false, false, true, 10), 0, 1));
+            $context['_seq'] = twig_ensure_traversable(twig_slice($this->env, twig_get_attribute($this->env, $this->source, $context["comment"], "featured_images", [], "any", false, false, true, 8), 0, 1));
             foreach ($context['_seq'] as $context["_key"] => $context["image"]) {
-                // line 11
-                echo "                        <img alt=\"";
-                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "title", [], "any", false, false, true, 11), 11, $this->source), "html", null, true);
+                // line 9
+                echo "                <img alt=\"";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "title", [], "any", false, false, true, 9), 9, $this->source), "html", null, true);
                 echo "\" src=\"";
-                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["image"], "path", [], "any", false, false, true, 11), 11, $this->source), "html", null, true);
-                echo "\" class=\"avatar  rounded-circle\">
-                        <small class=\"d-block text-muted\">";
-                // line 12
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "published_at", [], "any", false, false, true, 12), 12, $this->source), "d:M"), "html", null, true);
-                echo "</small>
-                    ";
+                echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["image"], "path", [], "any", false, false, true, 9), 9, $this->source), "html", null, true);
+                echo "\" class=\"card-img-top\">
+            ";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['image'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 14
-            echo "                </div>
-                <div class=\"pl-3\">
-                    <h5 class=\"h6 mb-0\">";
-            // line 16
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "title", [], "any", false, false, true, 16), 16, $this->source), "html", null, true);
-            echo "</h5>
+            // line 11
+            echo "        </a>
+        <div class=\"card-body py-5 text-center\">
+            <a href=\"";
+            // line 13
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "url", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
+            echo "\" class=\"d-block h5 lh-150\">";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "title", [], "any", false, false, true, 13), 13, $this->source), "html", null, true);
+            echo "</a>
+        </div>
+        <div class=\"card-footer delimiter-top\">
+            <div class=\"row\">
+                <div class=\"col text-center\">
+                    <p>";
+            // line 18
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "excerpt", [], "any", false, false, true, 18), 18, $this->source), "html", null, true);
+            echo "</p>
                 </div>
             </div>
-            <p class=\"mt-4 lh-180\">";
-            // line 19
-            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "excerpt", [], "any", false, false, true, 19), 19, $this->source), "html", null, true);
-            echo "</p>
-            <span class=\"static-rating static-rating-sm\">
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                </span>
+            <div class=\"row\">
+                <div class=\"col text-center\">
+                    <ul class=\"list-inline mb-0\">
+                        <li class=\"list-inline-item pr-4\">
+                            <a href=\"#\" class=\"text-muted\">";
+            // line 25
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "published_at", [], "any", false, false, true, 25), 25, $this->source), "d M Y"), "html", null, true);
+            echo "</a>
+                        </li>
+                        <li class=\"list-inline-item pr-4\">
+                            <a href=\"#\" class=\"text-muted\"><i class=\"fas fa-eye mr-1 text-muted\"></i> &#128065; ";
+            // line 28
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, $context["comment"], "views", [], "any", false, false, true, 28), 28, $this->source), "html", null, true);
+            echo "</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    ";
+            $context['_iterated'] = true;
+        }
+        if (!$context['_iterated']) {
+            // line 37
+            echo "        ";
+            echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(($context["noPostsMessage"] ?? null), 37, $this->source), "html", null, true);
+            echo "
 ";
         }
         $_parent = $context['_parent'];
@@ -136,7 +159,7 @@ class __TwigTemplate_87db850287c9cd251bd65bab6ce8767e961211f7b65e2d2a009183e3864
 
     public function getDebugInfo()
     {
-        return array (  108 => 19,  102 => 16,  98 => 14,  90 => 12,  83 => 11,  79 => 10,  72 => 5,  68 => 4,  64 => 2,  62 => 1,);
+        return array (  140 => 37,  126 => 28,  120 => 25,  110 => 18,  100 => 13,  96 => 11,  85 => 9,  81 => 8,  77 => 7,  73 => 5,  68 => 4,  64 => 2,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -145,31 +168,39 @@ class __TwigTemplate_87db850287c9cd251bd65bab6ce8767e961211f7b65e2d2a009183e3864
 
 
 {% for comment in comments %}
-<div class=\"swiper-slide p-4 swiper-slide-active\" style=\"width: 338.333px;\">
-    <div class=\"card\">
-        <div class=\"card-body\">
-            <div class=\"d-flex align-items-center\">
-                <div>
-                    {% for image in comment.featured_images|slice(0, 1) %}
-                        <img alt=\"{{ comment.title }}\" src=\"{{ image.path }}\" class=\"avatar  rounded-circle\">
-                        <small class=\"d-block text-muted\">{{ comment.published_at|date('d:M') }}</small>
-                    {% endfor %}
-                </div>
-                <div class=\"pl-3\">
-                    <h5 class=\"h6 mb-0\">{{ comment.title }}</h5>
+<div class=\"col-lg-4\">
+    <div class=\"card hover-shadow-lg hover-translate-y-n10\">
+        <a href=\"{{ comment.url }}\">
+            {% for image in comment.featured_images|slice(0, 1) %}
+                <img alt=\"{{ comment.title }}\" src=\"{{ image.path }}\" class=\"card-img-top\">
+            {% endfor %}
+        </a>
+        <div class=\"card-body py-5 text-center\">
+            <a href=\"{{ comment.url }}\" class=\"d-block h5 lh-150\">{{ comment.title }}</a>
+        </div>
+        <div class=\"card-footer delimiter-top\">
+            <div class=\"row\">
+                <div class=\"col text-center\">
+                    <p>{{ comment.excerpt }}</p>
                 </div>
             </div>
-            <p class=\"mt-4 lh-180\">{{ comment.excerpt }}</p>
-            <span class=\"static-rating static-rating-sm\">
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                    <i class=\"star fas fa-star voted\"></i>
-                </span>
+            <div class=\"row\">
+                <div class=\"col text-center\">
+                    <ul class=\"list-inline mb-0\">
+                        <li class=\"list-inline-item pr-4\">
+                            <a href=\"#\" class=\"text-muted\">{{ comment.published_at|date('d M Y') }}</a>
+                        </li>
+                        <li class=\"list-inline-item pr-4\">
+                            <a href=\"#\" class=\"text-muted\"><i class=\"fas fa-eye mr-1 text-muted\"></i> &#128065; {{ comment.views }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    {% else %}
+        {{ noPostsMessage }}
 {% endfor %}", "/home/pekhov/Projects/octo.loc/themes/octo/partials/blog-slider.htm", "");
     }
 }

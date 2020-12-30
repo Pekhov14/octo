@@ -1,4 +1,6 @@
-1609165888a:1:{s:11:"default.htm";a:6:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2298:"description = "Default layout"
+1609266532a:1:{s:11:"default.htm";a:7:{s:8:"fileName";s:11:"default.htm";s:7:"content";s:2405:"description = "Default layout"
+
+[SeoCmsPage]
 ==
 <!DOCTYPE html>
 <html lang="en" data-lt-installed="true">
@@ -7,7 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
     <meta name="author" content="Webpixels">
-    <title>{{ this.page.title }}</title>
+   <!-- <title>{{ this.page.title }}</title> -->
+     {% component 'SeoCmsPage' %}
     {% styles %}
     <!-- Favicon -->
     <link rel="icon" href="https://preview.webpixels.io/purpose-website-ui-kit/assets/img/brand/favicon.png" type="image/png">
@@ -50,14 +53,15 @@
 {% scripts %}
 
 </body>
-</html>";s:5:"mtime";i:1609158413;s:6:"markup";s:2264:"<!DOCTYPE html>
+</html>";s:5:"mtime";i:1609261480;s:6:"markup";s:2357:"<!DOCTYPE html>
 <html lang="en" data-lt-installed="true">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.">
     <meta name="author" content="Webpixels">
-    <title>{{ this.page.title }}</title>
+   <!-- <title>{{ this.page.title }}</title> -->
+     {% component 'SeoCmsPage' %}
     {% styles %}
     <!-- Favicon -->
     <link rel="icon" href="https://preview.webpixels.io/purpose-website-ui-kit/assets/img/brand/favicon.png" type="image/png">
@@ -100,4 +104,4 @@
 {% scripts %}
 
 </body>
-</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";}}
+</html>";s:4:"code";N;s:11:"description";s:14:"Default layout";s:10:"SeoCmsPage";a:0:{}}}

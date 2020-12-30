@@ -5,36 +5,43 @@ postsPerPage = 3
 noPostsMessage = "Записей не найдено"
 sortOrder = "published_at desc"
 categoryPage = "home"
-postPage = "home"
+postPage = "post"
 ==
-
 {% set comments = blogPosts.posts %}
 
 
 {% for comment in comments %}
-<div class="swiper-slide p-4 swiper-slide-active" style="width: 338.333px;">
-    <div class="card">
-        <div class="card-body">
-            <div class="d-flex align-items-center">
-                <div>
-                    {% for image in comment.featured_images|slice(0, 1) %}
-                        <img alt="{{ comment.title }}" src="{{ image.path }}" class="avatar  rounded-circle">
-                        <small class="d-block text-muted">{{ comment.published_at|date('d:M') }}</small>
-                    {% endfor %}
-                </div>
-                <div class="pl-3">
-                    <h5 class="h6 mb-0">{{ comment.title }}</h5>
+<div class="col-lg-4">
+    <div class="card hover-shadow-lg hover-translate-y-n10">
+        <a href="{{ comment.url }}">
+            {% for image in comment.featured_images|slice(0, 1) %}
+                <img alt="{{ comment.title }}" src="{{ image.path }}" class="card-img-top">
+            {% endfor %}
+        </a>
+        <div class="card-body py-5 text-center">
+            <a href="{{ comment.url }}" class="d-block h5 lh-150">{{ comment.title }}</a>
+        </div>
+        <div class="card-footer delimiter-top">
+            <div class="row">
+                <div class="col text-center">
+                    <p>{{ comment.excerpt }}</p>
                 </div>
             </div>
-            <p class="mt-4 lh-180">{{ comment.excerpt }}</p>
-            <span class="static-rating static-rating-sm">
-                    <i class="star fas fa-star voted"></i>
-                    <i class="star fas fa-star voted"></i>
-                    <i class="star fas fa-star voted"></i>
-                    <i class="star fas fa-star voted"></i>
-                    <i class="star fas fa-star voted"></i>
-                </span>
+            <div class="row">
+                <div class="col text-center">
+                    <ul class="list-inline mb-0">
+                        <li class="list-inline-item pr-4">
+                            <a href="#" class="text-muted">{{ comment.published_at|date('d M Y') }}</a>
+                        </li>
+                        <li class="list-inline-item pr-4">
+                            <a href="#" class="text-muted"><i class="fas fa-eye mr-1 text-muted"></i> &#128065; {{ comment.views }}</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+    {% else %}
+        {{ noPostsMessage }}
 {% endfor %}

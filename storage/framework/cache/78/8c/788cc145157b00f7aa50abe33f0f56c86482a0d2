@@ -1,0 +1,53 @@
+1609266532a:1:{s:8:"post.htm";a:14:{s:8:"fileName";s:8:"post.htm";s:7:"content";s:837:"title = "Orange web Blog"
+url = "/post/:slug"
+layout = "default"
+is_hidden = 0
+robot_index = "index"
+robot_follow = "follow"
+
+[blogPost]
+slug = "{{ :slug }}"
+categoryPage = "blog/category"
+
+[commentsPost]
+
+[SeoBlogPost]
+post = "post"
+==
+{% component 'SeoBlogPost' data=post %}
+
+<section class="slice">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Article body -->
+                <h1 class="lh-150 mb-3" style="padding-top: 50px;">{{ post.title }}</h1>
+                <article>
+                    {{ post.content_html|raw }}
+                </article>
+                {% component 'commentsPost' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";s:5:"mtime";i:1609261254;s:6:"markup";s:600:"{% component 'SeoBlogPost' data=post %}
+
+<section class="slice">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-9">
+                <!-- Article body -->
+                <h1 class="lh-150 mb-3" style="padding-top: 50px;">{{ post.title }}</h1>
+                <article>
+                    {{ post.content_html|raw }}
+                </article>
+                {% component 'commentsPost' %}
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>";s:4:"code";N;s:5:"title";s:15:"Orange web Blog";s:3:"url";s:11:"/post/:slug";s:6:"layout";s:7:"default";s:9:"is_hidden";s:1:"0";s:11:"robot_index";s:5:"index";s:12:"robot_follow";s:6:"follow";s:8:"blogPost";a:2:{s:4:"slug";s:11:"{{ :slug }}";s:12:"categoryPage";s:13:"blog/category";}s:12:"commentsPost";a:0:{}s:11:"SeoBlogPost";a:1:{s:4:"post";s:4:"post";}}}

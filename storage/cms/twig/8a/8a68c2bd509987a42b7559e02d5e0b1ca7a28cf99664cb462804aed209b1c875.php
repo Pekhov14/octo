@@ -29,13 +29,13 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
         $this->blocks = [
         ];
         $this->sandbox = $this->env->getExtension('\Twig\Extension\SandboxExtension');
-        $tags = array("styles" => 9, "partial" => 22, "page" => 25, "framework" => 47, "scripts" => 48);
-        $filters = array("escape" => 8, "theme" => 13);
+        $tags = array("component" => 9, "styles" => 10, "partial" => 23, "page" => 26, "framework" => 48, "scripts" => 49);
+        $filters = array("escape" => 8, "theme" => 14);
         $functions = array();
 
         try {
             $this->sandbox->checkSecurity(
-                ['styles', 'partial', 'page', 'framework', 'scripts'],
+                ['component', 'styles', 'partial', 'page', 'framework', 'scripts'],
                 ['escape', 'theme'],
                 []
             );
@@ -66,29 +66,34 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
     <meta name=\"description\" content=\"Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.\">
     <meta name=\"author\" content=\"Webpixels\">
-    <title>";
+   <!-- <title>";
         // line 8
         echo twig_escape_filter($this->env, $this->sandbox->ensureToStringAllowed(twig_get_attribute($this->env, $this->source, twig_get_attribute($this->env, $this->source, ($context["this"] ?? null), "page", [], "any", false, false, true, 8), "title", [], "any", false, false, true, 8), 8, $this->source), "html", null, true);
-        echo "</title>
-    ";
+        echo "</title> -->
+     ";
         // line 9
+        $context['__cms_component_params'] = [];
+        echo $this->env->getExtension('Cms\Twig\Extension')->componentFunction("SeoCmsPage"        , $context['__cms_component_params']        );
+        unset($context['__cms_component_params']);
+        // line 10
+        echo "    ";
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('css');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('styles');
-        // line 10
+        // line 11
         echo "    <!-- Favicon -->
     <link rel=\"icon\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/assets/img/brand/favicon.png\" type=\"image/png\">
     <!-- Font Awesome 5 -->
     <link rel=\"stylesheet\" href=\"";
-        // line 13
+        // line 14
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/all.min.css");
         echo "\"><!-- Page CSS -->
     <link rel=\"stylesheet\" href=\"";
-        // line 14
+        // line 15
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/swiper.min.css");
         echo "\">
     <!-- Purpose CSS -->
     <link rel=\"stylesheet\" href=\"";
-        // line 16
+        // line 17
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/css/purpose.css");
         echo "\" id=\"stylesheet\">
     <style></style>
@@ -97,69 +102,69 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
 <body class=\"g-sidenav-show g-sidenav-pinned\">
 
 ";
-        // line 22
+        // line 23
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("header"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 23
+        // line 24
         echo "
 <div class=\"main-content\">
     ";
-        // line 25
-        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
         // line 26
+        echo $this->env->getExtension('Cms\Twig\Extension')->pageFunction();
+        // line 27
         echo "</div>
 
 ";
-        // line 28
+        // line 29
         $context['__cms_partial_params'] = [];
         echo $this->env->getExtension('Cms\Twig\Extension')->partialFunction("footer"        , $context['__cms_partial_params']        , true        );
         unset($context['__cms_partial_params']);
-        // line 29
+        // line 30
         echo "<!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
 <script src=\"";
-        // line 30
+        // line 31
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/purpose.core.js");
         echo "\"></script>
 <!-- Page JS -->
 <script src=\"";
-        // line 32
+        // line 33
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/swiper.min.js");
         echo "\"></script>
 <!-- Purpose JS -->
 <script src=\"";
-        // line 34
+        // line 35
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js//purpose.js");
         echo "\"></script><div class=\"mask-body mask-body-light d-xl-none\" data-action=\"sidenav-unpin\" data-target=\"undefined\"></div>
 <!-- Demo JS - remove it when starting your project -->
 <script src=\"";
-        // line 36
+        // line 37
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/demo.js");
         echo "\"></script>
 
 <!-- Core JS - includes jquery, bootstrap, popper, in-view and sticky-kit -->
 <script src=\"";
-        // line 39
+        // line 40
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/purpose.core.js");
         echo "\"></script>
 <!-- Page JS -->
 <script src=\"";
-        // line 41
+        // line 42
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/swiper.min.js");
         echo "\"></script>
 <!-- Purpose JS -->
 <script src=\"";
-        // line 43
+        // line 44
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/purpose.js");
         echo "\"></script><div class=\"mask-body mask-body-light d-xl-none\" data-action=\"sidenav-unpin\" data-target=\"undefined\"></div>
 <!-- Demo JS - remove it when starting your project -->
 <script src=\"";
-        // line 45
+        // line 46
         echo $this->extensions['Cms\Twig\Extension']->themeFilter("assets/js/demo.js");
         echo "\"></script>
 
 ";
-        // line 47
+        // line 48
         $_minify = System\Classes\CombineAssets::instance()->useMinify;
         if ($_minify) {
             echo '<script src="' . Request::getBasePath() . '/modules/system/assets/js/framework.combined-min.js"></script>'.PHP_EOL;
@@ -170,10 +175,10 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
         }
         echo '<link rel="stylesheet" property="stylesheet" href="' . Request::getBasePath() .'/modules/system/assets/css/framework.extras'.($_minify ? '-min' : '').'.css">'.PHP_EOL;
         unset($_minify);
-        // line 48
+        // line 49
         echo $this->env->getExtension('Cms\Twig\Extension')->assetsFunction('js');
         echo $this->env->getExtension('Cms\Twig\Extension')->displayBlock('scripts');
-        // line 49
+        // line 50
         echo "
 </body>
 </html>";
@@ -191,7 +196,7 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
 
     public function getDebugInfo()
     {
-        return array (  177 => 49,  174 => 48,  163 => 47,  158 => 45,  153 => 43,  148 => 41,  143 => 39,  137 => 36,  132 => 34,  127 => 32,  122 => 30,  119 => 29,  115 => 28,  111 => 26,  109 => 25,  105 => 23,  101 => 22,  92 => 16,  87 => 14,  83 => 13,  78 => 10,  75 => 9,  71 => 8,  62 => 1,);
+        return array (  182 => 50,  179 => 49,  168 => 48,  163 => 46,  158 => 44,  153 => 42,  148 => 40,  142 => 37,  137 => 35,  132 => 33,  127 => 31,  124 => 30,  120 => 29,  116 => 27,  114 => 26,  110 => 24,  106 => 23,  97 => 17,  92 => 15,  88 => 14,  83 => 11,  79 => 10,  75 => 9,  71 => 8,  62 => 1,);
     }
 
     public function getSourceContext()
@@ -203,7 +208,8 @@ class __TwigTemplate_bb7ee7da5cb52717753e86bf7b264ae6f6c417d01e07354b0832bbf322b
     <meta name=\"viewport\" content=\"width=device-width, initial-scale=1, shrink-to-fit=no\">
     <meta name=\"description\" content=\"Purpose is a unique and beautiful collection of UI elements that are all flexible and modular. A complete and customizable solution to building the website of your dreams.\">
     <meta name=\"author\" content=\"Webpixels\">
-    <title>{{ this.page.title }}</title>
+   <!-- <title>{{ this.page.title }}</title> -->
+     {% component 'SeoCmsPage' %}
     {% styles %}
     <!-- Favicon -->
     <link rel=\"icon\" href=\"https://preview.webpixels.io/purpose-website-ui-kit/assets/img/brand/favicon.png\" type=\"image/png\">
